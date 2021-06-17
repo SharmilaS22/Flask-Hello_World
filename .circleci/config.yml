@@ -35,8 +35,8 @@ jobs:
           command: |  # use pipenv to install dependencies
             sudo pip install pipenv
             pipenv install
-      - run: python3 main.py
-      - run: python3 test.py
+      - run: pipenv run python main.py
+      - run: pipenv run python test.py
           # name: Run tests
           # # This assumes pytest is installed via the install-package step above
           # command: pytest
